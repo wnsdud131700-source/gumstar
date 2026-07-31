@@ -1,4 +1,5 @@
 import { BookOpen } from "lucide-react";
+import Link from "next/link";
 
 export default function SolutionsPage() {
   // 챕터별 문제 배열 생성
@@ -9,12 +10,13 @@ export default function SolutionsPage() {
   const renderGrid = (problems: number[]) => (
     <div className="w-full grid grid-cols-4 sm:grid-cols-6 md:grid-cols-7 lg:grid-cols-10 gap-4 mt-6 pb-8">
       {problems.map((num) => (
-        <div
+        <Link
           key={num}
+          href={`/solutions/${num}`}
           className="flex items-center justify-center aspect-square text-2xl text-gray-600 bg-white shadow-md shadow-pastelBlue/50 rounded-full hover:bg-pastelMint hover:text-gray-800 hover:scale-110 transition-transform duration-200 cursor-pointer"
         >
           {num}
-        </div>
+        </Link>
       ))}
     </div>
   );
