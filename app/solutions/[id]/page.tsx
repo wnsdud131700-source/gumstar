@@ -4,11 +4,7 @@ import { ArrowLeft, PlayCircle } from "lucide-react";
 export default function SolutionDetailPage({ params }: { params: { id: string } }) {
   const { id } = params;
   
-  // 현재는 1번 문항에 대한 링크를 기본으로 제공합니다.
-  const videoId = "RtZcqVBc4kQ"; 
-  const listId = "PLZFVgSfK9dAFhsj7D9mUrlYqsaztk73yS";
-  
-  const embedUrl = `https://www.youtube.com/embed/${videoId}?list=${listId}`;
+
 
   return (
     <div className="w-full max-w-5xl flex flex-col items-center gap-8 py-12 px-6">
@@ -32,19 +28,9 @@ export default function SolutionDetailPage({ params }: { params: { id: string } 
           {id}번 문항 해설강의
         </h1>
 
-        {/* Video Container */}
-        <div className="w-full max-w-4xl aspect-video rounded-3xl overflow-hidden shadow-lg border-4 border-pastelBlue/30 bg-gray-100">
-          <iframe 
-            width="100%" 
-            height="100%" 
-            src={embedUrl}
-            title={`${id}번 문항 해설강의`}
-            frameBorder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerPolicy="strict-origin-when-cross-origin" 
-            allowFullScreen
-            className="w-full h-full"
-          ></iframe>
+        {/* Video Placeholder */}
+        <div className="w-full max-w-4xl aspect-video rounded-3xl shadow-lg border-4 border-pastelBlue/30 bg-gray-50 flex items-center justify-center">
+          <p className="text-3xl text-gray-400 font-medium">준비중입니다 ㅠㅠ</p>
         </div>
         
       </div>
