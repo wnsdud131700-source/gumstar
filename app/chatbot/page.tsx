@@ -3,6 +3,10 @@
 import { useChat } from "ai/react";
 import { Send, User, Bot } from "lucide-react";
 import { useEffect, useRef } from "react";
+import ReactMarkdown from "react-markdown";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
+import "katex/dist/katex.min.css";
 
 export default function ChatbotPage() {
   const { messages, input, handleInputChange, handleSubmit, isLoading } = useChat();
@@ -45,7 +49,12 @@ export default function ChatbotPage() {
                   : "bg-teal-800/50 border-2 border-dashed border-chalk/40 text-chalk font-note text-xl"
               }`}
             >
-              {m.content}
+              <ReactMarkdown
+                remarkPlugins={[remarkMath]}
+                rehypePlugins={[rehypeKatex]}
+              >
+                {m.content}
+              </ReactMarkdown>
             </div>
           </div>
         ))}
