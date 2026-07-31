@@ -11,7 +11,7 @@ export default function SolutionsPage() {
       {problems.map((num) => (
         <div
           key={num}
-          className="flex items-center justify-center aspect-square text-2xl font-bold text-gray-600 bg-white shadow-md shadow-pastelBlue/50 rounded-full hover:bg-pastelMint hover:text-gray-800 hover:scale-110 transition-transform duration-200 cursor-pointer"
+          className="flex items-center justify-center aspect-square text-2xl text-gray-600 bg-white shadow-md shadow-pastelBlue/50 rounded-full hover:bg-pastelMint hover:text-gray-800 hover:scale-110 transition-transform duration-200 cursor-pointer"
         >
           {num}
         </div>
@@ -22,7 +22,7 @@ export default function SolutionsPage() {
   return (
     <div className="w-full max-w-6xl flex flex-col items-center gap-12 py-12 px-6">
       <div className="text-center space-y-4">
-        <h1 className="text-4xl md:text-5xl font-bold tracking-wide text-pink-500 flex items-center justify-center gap-4">
+        <h1 className="text-4xl md:text-5xl tracking-wide text-pink-500 flex items-center justify-center gap-4">
           <BookOpen className="w-10 h-10 text-pink-500" />
           부교재 해설강의
         </h1>
@@ -35,7 +35,7 @@ export default function SolutionsPage() {
 
         {/* Chapter 1 */}
         <section>
-          <h2 className="text-3xl font-bold text-sky-500 tracking-wider pb-4 inline-block drop-shadow-sm">
+          <h2 className="text-3xl text-sky-500 tracking-wider pb-4 inline-block drop-shadow-sm">
             ☁️ Chapter 1. 이차곡선
           </h2>
           {renderGrid(chapter1)}
@@ -43,7 +43,7 @@ export default function SolutionsPage() {
 
         {/* Chapter 2 */}
         <section>
-          <h2 className="text-3xl font-bold text-teal-500 tracking-wider pb-4 inline-block drop-shadow-sm">
+          <h2 className="text-3xl text-teal-500 tracking-wider pb-4 inline-block drop-shadow-sm">
             ☁️ Chapter 2. 공간도형과 공간좌표
           </h2>
           {renderGrid(chapter2)}
@@ -51,7 +51,7 @@ export default function SolutionsPage() {
 
         {/* Chapter 3 */}
         <section>
-          <h2 className="text-3xl font-bold text-orange-400 tracking-wider pb-4 inline-block drop-shadow-sm">
+          <h2 className="text-3xl text-orange-400 tracking-wider pb-4 inline-block drop-shadow-sm">
             ☁️ Chapter 3. 벡터
           </h2>
           {renderGrid(chapter3)}
