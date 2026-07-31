@@ -27,7 +27,7 @@ export default function RootLayout({
               <li className="hover:text-chalkYellow cursor-pointer transition-colors"><Link href="/conics">이차곡선</Link></li>
               <li className="hover:text-chalkYellow cursor-pointer transition-colors"><Link href="#">공간도형과 공간좌표</Link></li>
               <li className="hover:text-chalkYellow cursor-pointer transition-colors"><Link href="#">벡터</Link></li>
-              <li className="hover:text-chalkYellow cursor-pointer transition-colors"><Link href="#">부교재 해설강의</Link></li>
+              <li className="hover:text-chalkYellow cursor-pointer transition-colors"><Link href="/solutions">부교재 해설강의</Link></li>
               <li className="hover:text-chalkYellow cursor-pointer transition-colors text-chalkYellow border-b-2 border-chalkYellow border-dashed"><Link href="/chatbot">질문하기</Link></li>
             </ul>
           </nav>
