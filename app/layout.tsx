@@ -15,12 +15,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className="antialiased min-h-screen flex flex-col bg-teal-900 text-[#fdfbf7] font-chalk selection:bg-teal-700 selection:text-white">
+      <body className="antialiased min-h-screen flex flex-col bg-pastelBlue text-gray-800 font-jua selection:bg-pastelPink selection:text-white">
 
         <main className="flex-1 flex flex-col items-center justify-center p-8">
           {children}
         </main>
-        <footer className="p-4 border-t-2 border-dashed border-[#fdfbf7]/40 text-center text-lg text-[#fdfbf7]/70 font-note">
+        <footer className="p-6 text-center text-xl text-gray-600">
           © {new Date().getFullYear()} 준영T의 수학교실. All rights reserved.
         </footer>
       </body>

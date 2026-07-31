@@ -9,13 +9,14 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        chalk: ['"Nanum Pen Script"', "cursive"],
-        note: ['"Gowun Dodum"', "sans-serif"],
+        jua: ['"Jua"', "sans-serif"],
       },
       colors: {
-        chalkboard: "#134e4a",
-        chalk: "#fdfbf7",
-        chalkYellow: "#fef08a",
+        pastelPink: "#ffb3ba",
+        pastelMint: "#baffc9",
+        pastelBlue: "#bae1ff",
+        pastelLemon: "#ffffba",
+        pastelPeach: "#ffdfba"
       }
     },
   },
