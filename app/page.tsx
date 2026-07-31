@@ -8,7 +8,7 @@ export default function Home() {
       
       <div className="text-center space-y-6">
         <h1 className="text-5xl md:text-7xl font-bold tracking-widest text-chalkYellow">
-          미적분Ⅰ, 그리고 기하
+          준영쌤과 함께하는 '기하'
         </h1>
         <p className="text-2xl md:text-3xl opacity-90 leading-relaxed font-note">
           수학은 단순한 계산이 아닙니다.<br />
