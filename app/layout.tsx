@@ -21,7 +21,7 @@ export default function RootLayout({
           {children}
         </main>
         <footer className="p-6 text-center text-xl text-gray-600">
-          © {new Date().getFullYear()} 준영T의 수학교실. All rights reserved.
+          © {new Date().getFullYear()} 2026-2 기하 부교재 해설강의. All rights reserved.
         </footer>
       </body>
     </html>
