@@ -16,10 +16,15 @@ export default function Home() {
         </p>
       </div>
 
-      <button className="group flex items-center gap-3 px-8 py-4 mt-8 bg-transparent border-2 border-dashed border-chalkYellow text-chalkYellow text-2xl rounded-2xl hover:bg-chalkYellow hover:text-teal-900 transition-all duration-300">
-        <Pencil className="w-6 h-6 group-hover:animate-bounce" />
-        <span>시작하기</span>
-      </button>
+      <div className="flex gap-4 mt-8">
+        <button className="group flex items-center gap-3 px-8 py-4 bg-transparent border-2 border-dashed border-chalkYellow text-chalkYellow text-2xl rounded-2xl hover:bg-chalkYellow hover:text-teal-900 transition-all duration-300">
+          <Pencil className="w-6 h-6 group-hover:animate-bounce" />
+          <span>시작하기</span>
+        </button>
+        <a href="/chatbot" className="group flex items-center gap-3 px-8 py-4 bg-transparent border-2 border-dashed border-chalk text-chalk text-2xl rounded-2xl hover:bg-chalk hover:text-teal-900 transition-all duration-300">
+          <span>질문하기 💬</span>
+        </a>
+      </div>
     </section>
   );
 }
