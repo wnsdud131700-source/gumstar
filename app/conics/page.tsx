@@ -88,6 +88,13 @@ export default function ConicsQuiz() {
 
   const handleSaveScore = async () => {
     if (!userName.trim()) return alert("이름을 입력해주세요!");
+    
+    // 환경 변수 누락 체크 (Vercel 설정 오류 방지)
+    if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
+      alert("🚨 에러: Vercel에 NEXT_PUBLIC_SUPABASE_URL 환경 변수가 설정되지 않았습니다!\nVercel 설정에서 변수명 앞에 'NEXT_PUBLIC_'이 잘 붙어있는지 확인하시고 다시 배포(Redeploy)해 주세요.");
+      return;
+    }
+
     setIsSubmitting(true);
     
     const { error } = await supabase.from("conic_scores").insert([
@@ -97,7 +104,7 @@ export default function ConicsQuiz() {
     setIsSubmitting(false);
     if (error) {
       console.error(error);
-      alert("점수 저장에 실패했습니다. (Supabase 연결 설정을 확인하세요)");
+      alert(`점수 저장에 실패했습니다. (상세 에러: ${error.message})`);
     } else {
       setSubmitSuccess(true);
     }
