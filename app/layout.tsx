@@ -22,6 +22,7 @@ export default function RootLayout({
             <ul className="flex gap-6 text-2xl">
               <li className="hover:text-chalkYellow cursor-pointer transition-colors">공지사항</li>
               <li className="hover:text-chalkYellow cursor-pointer transition-colors">자료실</li>
+              <li className="hover:text-chalkYellow cursor-pointer transition-colors">이차곡선</li>
               <li className="hover:text-chalkYellow cursor-pointer transition-colors">질문게시판</li>
             </ul>
           </nav>
