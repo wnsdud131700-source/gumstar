@@ -6,6 +6,10 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "2026-2 기하 부교재 해설강의",
   description: "2026학년도 2학기 신도고등학교 기하 부교재 해설강의",
+  openGraph: {
+    title: "2026-2 기하 부교재 해설강의",
+    description: "2026학년도 2학기 신도고등학교 기하 부교재 해설강의",
+  }
 };
 
 export default function RootLayout({
