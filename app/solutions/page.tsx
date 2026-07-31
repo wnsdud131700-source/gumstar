@@ -22,8 +22,8 @@ export default function SolutionsPage() {
   return (
     <div className="w-full max-w-6xl flex flex-col items-center gap-12 py-12 px-6">
       <div className="text-center space-y-4">
-        <h1 className="text-4xl md:text-5xl font-bold tracking-wide text-pastelPink flex items-center justify-center gap-4">
-          <BookOpen className="w-10 h-10 text-pastelPink" />
+        <h1 className="text-4xl md:text-5xl font-bold tracking-wide text-pink-500 flex items-center justify-center gap-4">
+          <BookOpen className="w-10 h-10 text-pink-500" />
           부교재 해설강의
         </h1>
         <p className="text-xl text-gray-500">
@@ -35,7 +35,7 @@ export default function SolutionsPage() {
 
         {/* Chapter 1 */}
         <section>
-          <h2 className="text-3xl font-bold text-pastelBlue tracking-wider pb-4 inline-block drop-shadow-sm">
+          <h2 className="text-3xl font-bold text-sky-500 tracking-wider pb-4 inline-block drop-shadow-sm">
             ☁️ Chapter 1. 이차곡선
           </h2>
           {renderGrid(chapter1)}
@@ -43,7 +43,7 @@ export default function SolutionsPage() {
 
         {/* Chapter 2 */}
         <section>
-          <h2 className="text-3xl font-bold text-pastelMint tracking-wider pb-4 inline-block drop-shadow-sm">
+          <h2 className="text-3xl font-bold text-teal-500 tracking-wider pb-4 inline-block drop-shadow-sm">
             ☁️ Chapter 2. 공간도형과 공간좌표
           </h2>
           {renderGrid(chapter2)}
@@ -51,7 +51,7 @@ export default function SolutionsPage() {
 
         {/* Chapter 3 */}
         <section>
-          <h2 className="text-3xl font-bold text-pastelPeach tracking-wider pb-4 inline-block drop-shadow-sm">
+          <h2 className="text-3xl font-bold text-orange-400 tracking-wider pb-4 inline-block drop-shadow-sm">
             ☁️ Chapter 3. 벡터
           </h2>
           {renderGrid(chapter3)}
