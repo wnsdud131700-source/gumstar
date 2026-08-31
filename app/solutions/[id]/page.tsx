@@ -8,7 +8,8 @@ export default function SolutionDetailPage({ params }: { params: { id: string } 
   // 곧 링크를 주시면 여기에 영상 ID를 넣으면 됩니다.
   // 예: "1": "유튜브영상ID"
   const videoLinks: Record<string, string> = {
-    "1": "iNf3LDJYKH8", 
+    "1": "iNf3LDJYKH8",
+    "2": "UAcVcM8pW9I",
   };
 
   const videoId = videoLinks[id];
