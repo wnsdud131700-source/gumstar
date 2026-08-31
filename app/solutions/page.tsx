@@ -1,5 +1,6 @@
 import { BookOpen } from "lucide-react";
 import Link from "next/link";
+import { videoLinks } from "./videoData";
 
 export default function SolutionsPage() {
   // 챕터별 문제 배열 생성
@@ -9,15 +10,22 @@ export default function SolutionsPage() {
 
   const renderGrid = (problems: number[]) => (
     <div className="w-full grid grid-cols-4 sm:grid-cols-6 md:grid-cols-7 lg:grid-cols-10 gap-4 mt-6 pb-8">
-      {problems.map((num) => (
-        <Link
-          key={num}
-          href={`/solutions/${num}`}
-          className="flex items-center justify-center aspect-square text-2xl text-gray-600 bg-white shadow-md shadow-pastelBlue/50 rounded-full hover:bg-pastelMint hover:text-gray-800 hover:scale-110 transition-transform duration-200 cursor-pointer"
-        >
-          {num}
-        </Link>
-      ))}
+      {problems.map((num) => {
+        const hasVideo = !!videoLinks[num.toString()];
+        return (
+          <Link
+            key={num}
+            href={`/solutions/${num}`}
+            className={`flex items-center justify-center aspect-square text-2xl font-medium shadow-md rounded-full transition-transform duration-200 cursor-pointer ${
+              hasVideo
+                ? "bg-pink-400 text-white shadow-pink-300 hover:bg-pink-500 hover:scale-110"
+                : "bg-white text-gray-600 shadow-pastelBlue/50 hover:bg-pastelMint hover:text-gray-800 hover:scale-110"
+            }`}
+          >
+            {num}
+          </Link>
+        );
+      })}
     </div>
   );
 

@@ -1,17 +1,11 @@
 import Link from "next/link";
 import { ArrowLeft, PlayCircle } from "lucide-react";
 
+import { videoLinks } from "../videoData";
+
 export default function SolutionDetailPage({ params }: { params: { id: string } }) {
   const { id } = params;
   
-// 임시로 문항 번호(id)와 유튜브 영상 ID를 매핑하는 객체입니다.
-  // 곧 링크를 주시면 여기에 영상 ID를 넣으면 됩니다.
-  // 예: "1": "유튜브영상ID"
-  const videoLinks: Record<string, string> = {
-    "1": "iNf3LDJYKH8",
-    "2": "UAcVcM8pW9I",
-  };
-
   const videoId = videoLinks[id];
 
   return (
