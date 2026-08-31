@@ -36,9 +36,7 @@ export default function SolutionsPage() {
           <BookOpen className="w-10 h-10 text-pink-500" />
           부교재 해설강의
         </h1>
-        <p className="text-xl text-gray-500">
-          (해설 영상 업데이트 준비 중입니다 🎈)
-        </p>
+
       </div>
 
       <div className="w-full space-y-12 p-8 bg-white/70 backdrop-blur-sm rounded-[3rem] shadow-xl shadow-pastelMint/30 relative">
