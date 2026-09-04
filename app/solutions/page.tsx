@@ -4,8 +4,8 @@ import { videoLinks } from "./videoData";
 
 export default function SolutionsPage() {
   // 챕터별 문제 배열 생성
-  const chapter1 = Array.from({ length: 40 }, (_, i) => i + 1); // 1~40
-  const chapter2 = Array.from({ length: 20 }, (_, i) => i + 41); // 41~60
+  const chapter1 = [...Array.from({ length: 40 }, (_, i) => i + 1), 94, 95]; // 1~40, 94, 95
+  const chapter2 = [...Array.from({ length: 20 }, (_, i) => i + 41), 96]; // 41~60, 96
   const chapter3 = Array.from({ length: 33 }, (_, i) => i + 61); // 61~93
 
   const renderGrid = (problems: number[]) => (
