@@ -25,4 +25,5 @@ export const videoLinks: Record<string, string> = {
   "24": "HOB2cjnAOVc",
   "25": "0Ig8cpiSfIw",
   "26": "iTHU1ZrR19E",
+  "27": "ppUYsrB-FCc",
 };
