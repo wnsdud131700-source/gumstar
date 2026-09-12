@@ -5,12 +5,15 @@ import { videoLinks } from "./videoData";
 export default function SolutionsPage() {
   // 챕터별 문제 배열 생성
   const chapter1 = [...Array.from({ length: 40 }, (_, i) => i + 1), 94, 95]; // 1~40, 94, 95
-  const chapter2 = [41, 42, 43, 44, 45, 49, 96, 46, 47, 48, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60];
+  const chapter2 = [41, 42, 43, 44, 45, 49, 96, null, null, null, 46, 47, 48, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60];
   const chapter3 = Array.from({ length: 33 }, (_, i) => i + 61); // 61~93
 
-  const renderGrid = (problems: number[], gridClassName = "grid-cols-4 sm:grid-cols-6 md:grid-cols-7 lg:grid-cols-10") => (
+  const renderGrid = (problems: (number | null)[], gridClassName = "grid-cols-4 sm:grid-cols-6 md:grid-cols-7 lg:grid-cols-10") => (
     <div className={`w-full grid ${gridClassName} gap-4 mt-6 pb-8`}>
-      {problems.map((num) => {
+      {problems.map((num, idx) => {
+        if (num === null) {
+          return <div key={`empty-${idx}`} className="hidden lg:block"></div>;
+        }
         const hasVideo = !!videoLinks[num.toString()];
         return (
           <Link
@@ -54,7 +57,7 @@ export default function SolutionsPage() {
           <h2 className="text-3xl text-teal-500 tracking-wider pb-4 inline-block drop-shadow-sm">
             ☁️ Chapter 2. 공간도형과 공간좌표
           </h2>
-          {renderGrid(chapter2, "grid-cols-4 sm:grid-cols-7")}
+          {renderGrid(chapter2)}
         </section>
 
         {/* Chapter 3 */}
