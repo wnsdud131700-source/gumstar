@@ -43,6 +43,7 @@ export const videoLinks: Record<string, string> = {
   "42": "psr71BXgBwY",
   "43": "E-P8VFBNZXE",
   "44": "2XF6oCcgNqw",
+  "45": "jc3rcQMhTrU",
   "49": "wm8acBA_S-4",
   "94": "sFtsL4jPx4c",
   "95": "-9wUiKWAFQo",
