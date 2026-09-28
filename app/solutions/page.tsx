@@ -5,7 +5,7 @@ import { videoLinks } from "./videoData";
 export default function SolutionsPage() {
   // 챕터별 문제 배열 생성
   const chapter1 = [...Array.from({ length: 40 }, (_, i) => i + 1), 94, 95]; // 1~40, 94, 95
-  const chapter2 = [41, 42, 43, 44, 45, 49, 96, null, null, null, 46, 47, 48, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60];
+  const chapter2 = [41, 42, 43, 44, 45, 49, 96, null, null, null, 46, 47, 48, 97, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60];
   const chapter3 = Array.from({ length: 33 }, (_, i) => i + 61); // 61~93
 
   const renderGrid = (problems: (number | null)[], gridClassName = "grid-cols-4 sm:grid-cols-6 md:grid-cols-7 lg:grid-cols-10") => (
