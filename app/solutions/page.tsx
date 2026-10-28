@@ -3,9 +3,9 @@ import Link from "next/link";
 import { videoLinks } from "./videoData";
 
 export default function SolutionsPage() {
-  // 챕터별 문제 배열 생성
-  const chapter1 = [...Array.from({ length: 40 }, (_, i) => i + 1), 94, 95]; // 1~40, 94, 95
-  const chapter2 = [41, 42, 43, 44, 45, 49, 96, null, null, null, 46, 47, 48, 97, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60];
+  // 챕터별 문제 배열 생성 (동영상이 이미 업로드되었던 문제 버튼 제외)
+  const chapter1: number[] = [];
+  const chapter2 = [46, 47, 48, 97, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60];
   const chapter3 = [...Array.from({ length: 10 }, (_, i) => i + 61), 98, ...Array.from({ length: 23 }, (_, i) => i + 71)]; // 61~70, 98, 71~93
 
   const renderGrid = (problems: (number | null)[], gridClassName = "grid-cols-4 sm:grid-cols-6 md:grid-cols-7 lg:grid-cols-10") => (
@@ -45,12 +45,14 @@ export default function SolutionsPage() {
       <div className="w-full space-y-12 p-8 bg-white/70 backdrop-blur-sm rounded-[3rem] shadow-xl shadow-pastelMint/30 relative">
 
         {/* Chapter 1 */}
-        <section>
-          <h2 className="text-3xl text-sky-500 tracking-wider pb-4 inline-block drop-shadow-sm">
-            ☁️ Chapter 1. 이차곡선
-          </h2>
-          {renderGrid(chapter1)}
-        </section>
+        {chapter1.length > 0 && (
+          <section>
+            <h2 className="text-3xl text-sky-500 tracking-wider pb-4 inline-block drop-shadow-sm">
+              ☁️ Chapter 1. 이차곡선
+            </h2>
+            {renderGrid(chapter1)}
+          </section>
+        )}
 
         {/* Chapter 2 */}
         <section>
