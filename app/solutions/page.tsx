@@ -8,7 +8,11 @@ export default function SolutionsPage() {
   const chapter2 = [46, 47, 48, 97, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60];
   const chapter3 = [...Array.from({ length: 10 }, (_, i) => i + 61), 98, ...Array.from({ length: 23 }, (_, i) => i + 71)]; // 61~70, 98, 71~93
 
-  const renderGrid = (problems: (number | null)[], gridClassName = "grid-cols-4 sm:grid-cols-6 md:grid-cols-7 lg:grid-cols-10") => (
+  const renderGrid = (
+    problems: (number | null)[],
+    activeColorClass = "bg-pink-400 text-white shadow-pink-300 hover:bg-pink-500 hover:scale-110",
+    gridClassName = "grid-cols-4 sm:grid-cols-6 md:grid-cols-7 lg:grid-cols-10"
+  ) => (
     <div className={`w-full grid ${gridClassName} gap-4 mt-6 pb-8`}>
       {problems.map((num, idx) => {
         if (num === null) {
@@ -21,7 +25,7 @@ export default function SolutionsPage() {
             href={`/solutions/${num}`}
             className={`flex items-center justify-center aspect-square text-2xl font-medium shadow-md rounded-full transition-transform duration-200 cursor-pointer ${
               hasVideo
-                ? "bg-pink-400 text-white shadow-pink-300 hover:bg-pink-500 hover:scale-110"
+                ? activeColorClass
                 : "bg-white text-gray-600 shadow-pastelBlue/50 hover:bg-pastelMint hover:text-gray-800 hover:scale-110"
             }`}
           >
@@ -67,7 +71,7 @@ export default function SolutionsPage() {
           <h2 className="text-3xl text-orange-400 tracking-wider pb-4 inline-block drop-shadow-sm">
             ☁️ Chapter 3. 벡터
           </h2>
-          {renderGrid(chapter3)}
+          {renderGrid(chapter3, "bg-orange-400 text-white shadow-orange-300 hover:bg-orange-500 hover:scale-110")}
         </section>
       </div>
     </div>
