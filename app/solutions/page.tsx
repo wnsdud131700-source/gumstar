@@ -10,7 +10,7 @@ export default function SolutionsPage() {
 
   const renderGrid = (
     problems: (number | null)[],
-    activeColorClass = "bg-pink-400 text-white shadow-pink-300 hover:bg-pink-500 hover:scale-110",
+    activeColorClass = "bg-teal-500 text-white shadow-teal-300 hover:bg-teal-600 hover:scale-110",
     gridClassName = "grid-cols-4 sm:grid-cols-6 md:grid-cols-7 lg:grid-cols-10"
   ) => (
     <div className={`w-full grid ${gridClassName} gap-4 mt-6 pb-8`}>
