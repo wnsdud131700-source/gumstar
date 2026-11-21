@@ -6,7 +6,7 @@ export default function SolutionsPage() {
   // 챕터별 문제 배열 생성 (동영상이 이미 업로드되었던 문제 버튼 제외)
   const chapter1: number[] = [];
   const chapter2 = [46, 47, 48, 97, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60];
-  const chapter3 = [...Array.from({ length: 10 }, (_, i) => i + 61), 98, ...Array.from({ length: 23 }, (_, i) => i + 71)]; // 61~70, 98, 71~93
+  const chapter3 = [...Array.from({ length: 10 }, (_, i) => i + 61), 98, ...Array.from({ length: 23 }, (_, i) => i + 71), 99, 100]; // 61~70, 98, 71~93, 99, 100
 
   const renderGrid = (
     problems: (number | null)[],
