@@ -98,4 +98,5 @@ export const videoLinks: Record<string, string> = {
   "97": "cLsJZJ4qGBg",
   "98": "NGBTi1kU8o8",
   "99": "SRcB1v2KoKg",
+  "100": "mQgRsuNqEL0",
 };
