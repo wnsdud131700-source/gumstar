@@ -91,6 +91,7 @@ export const videoLinks: Record<string, string> = {
   "90": "qMSWVfPBd4o",
   "91": "wOcPS92lI08",
   "92": "poYcR6GZIy8",
+  "93": "HocKOgRCU0I",
   "94": "sFtsL4jPx4c",
   "95": "-9wUiKWAFQo",
   "96": "W19aEC3xxZY",
